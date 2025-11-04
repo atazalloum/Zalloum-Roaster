@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Zalloum & Skafi Roaster — Premium Nuts • Chocolate • Coffee</title>
-  <meta name="description" content="Premium Jordanian roastery. Freshly roasted nuts, artisan chocolate, and specialty coffee. Elegant gifts for every occasion.">
+  <title>Zalloum & Skafi Roaster</title>
+  <meta name="description"
+    content="Premium Jordanian roastery. Freshly roasted nuts, artisan chocolate, and specialty coffee. Elegant gifts for every occasion.">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Zalloum & Skafi Roaster — Premium Nuts • Chocolate • Coffee">
@@ -20,7 +22,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
   <!-- Brand Schema -->
   <script type="application/ld+json">
@@ -36,190 +39,703 @@
   </script>
 
   <style>
-    :root{
-      --bg:#0b0e14; --panel:#0f1520; --card:#0c1220; --glass:rgba(255,255,255,0.06);
-      --text:#e9eef6; --muted:#9fb1c9; --brand:#C8A56A; --brand-2:#4cd4d0; --stroke:#1c2740;
-      --shadow: 0 20px 60px rgba(0,0,0,.5);
-      --radius-xl:22px; --radius-2xl:28px; --radius-3xl:36px;
-      --max:1200px; --pad:clamp(16px, 2.5vw, 28px);
+    :root {
+      --bg: #0b0e14;
+      --panel: #0f1520;
+      --card: #0c1220;
+      --glass: rgba(255, 255, 255, 0.06);
+      --text: #e9eef6;
+      --muted: #9fb1c9;
+      --brand: #C8A56A;
+      --brand-2: #4cd4d0;
+      --stroke: #1c2740;
+      --shadow: 0 20px 60px rgba(0, 0, 0, .5);
+      --radius-xl: 22px;
+      --radius-2xl: 28px;
+      --radius-3xl: 36px;
+      --max: 1200px;
+      --pad: clamp(16px, 2.5vw, 28px);
     }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#f7f9fe; --panel:#ffffff; --card:#ffffff; --glass:rgba(0,0,0,0.04);
-        --text:#0b1220; --muted:#5d6f85; --stroke:#e6edf6; --shadow:0 20px 50px rgba(16,24,40,.1)
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f9fe;
+        --panel: #ffffff;
+        --card: #ffffff;
+        --glass: rgba(0, 0, 0, 0.04);
+        --text: #0b1220;
+        --muted: #5d6f85;
+        --stroke: #e6edf6;
+        --shadow: 0 20px 50px rgba(16, 24, 40, .1)
       }
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
-      color:var(--text); background:
-        radial-gradient(1200px 600px at 90% -20%, rgba(76,212,208,.18) 0%, transparent 60%),
-        radial-gradient(900px 500px at 5% -10%, rgba(200,165,106,.18) 0%, transparent 60%),
-        linear-gradient(180deg, #090d14 0%, var(--bg) 70%);
-      line-height:1.65;
+    * {
+      box-sizing: border-box
     }
-    a{color:inherit; text-decoration:none}
-    img{display:block; width:100%; height:auto}
 
-    .container{max-width:var(--max); margin-inline:auto; padding-inline:var(--pad)}
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 90% -20%, rgba(76, 212, 208, .18) 0%, transparent 60%),
+        radial-gradient(900px 500px at 5% -10%, rgba(200, 165, 106, .18) 0%, transparent 60%),
+        linear-gradient(180deg, #090d14 0%, var(--bg) 70%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto
+    }
+
+    .container {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: var(--pad)
+    }
 
     /* Header */
-    header{
-      position:sticky; top:0; z-index:50; border-bottom:1px solid var(--stroke);
-      backdrop-filter: blur(10px) saturate(160%); background: color-mix(in oklab, var(--panel) 85%, transparent);
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid var(--stroke);
+      backdrop-filter: blur(10px) saturate(160%);
+      background: color-mix(in oklab, var(--panel) 85%, transparent);
       transition: box-shadow .25s ease;
     }
-    header.is-scrolled{ box-shadow: var(--shadow); }
-    .nav{min-height:76px; display:flex; align-items:center; gap:16px;}
-    .brand{display:flex; align-items:center; gap:14px; font-weight:800; letter-spacing:.2px}
-    .brand__logo{
-      width:48px; height:48px; overflow:hidden; border-radius:14px;
-      background: radial-gradient(100% 100% at 0% 0%, var(--brand) 0%, color-mix(in oklab, var(--brand), black 24%) 100%);
-      display:grid; place-items:center; box-shadow: var(--shadow);
+
+    header.is-scrolled {
+      box-shadow: var(--shadow);
     }
-    .brand__text{display:flex; flex-direction:column}
-    .brand__text small{color:var(--muted); font-weight:600}
-    .nav__links{margin-inline-start:auto; display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-    .nav__links a{padding:10px 12px; border-radius:12px}
-    .nav__links a:hover{background:var(--glass)}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:999px; border:1px solid var(--stroke); background:var(--panel); font-weight:700; cursor:pointer}
-    .btn--gold{
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      letter-spacing: .2px
+    }
+
+    .brand__logo {
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
+      border-radius: 50px;
+      background: radial-gradient(100% 100% at 0% 0%, var(--brand) 0%, color-mix(in oklab, var(--brand), black 24%) 100%);
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow);
+
+      border: 5px solid color-mix(in oklab, var(--brand), #fff 25%);
+
+    }
+
+    .brand__text {
+      display: flex;
+      flex-direction: column
+    }
+
+    .brand__text small {
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .nav__links {
+      margin-inline-start: auto;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .nav__links a {
+      padding: 8px 9px;
+      border-radius: 9px
+    }
+
+    .nav__links a:hover {
+      background: var(--glass)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--stroke);
+      background: var(--panel);
+      font-weight: 700;
+      cursor: pointer
+    }
+
+    .btn--gold {
       border-color: color-mix(in oklab, var(--brand), #fff 28%);
       background:
         linear-gradient(180deg, color-mix(in oklab, var(--brand), #fff 25%), var(--brand));
-      color:#121212;
+      color: #121212;
     }
-    .btn--ghost{background:transparent}
-    .btn--pill{border-radius:999px}
-    .nav__cta{padding:10px 16px; border:1px solid var(--brand); border-radius:999px; color:var(--brand); font-weight:800}
-    .nav__cta:hover{background: color-mix(in oklab, var(--brand) 12%, transparent)}
-    @media (max-width:640px){ .nav{min-height:68px} }
+
+    .btn--ghost {
+      background: transparent
+    }
+
+    .btn--pill {
+      border-radius: 999px
+    }
+
+    .nav__cta {
+      padding: 10px 16px;
+      border: 1px solid var(--brand);
+      border-radius: 999px;
+      color: var(--brand);
+      font-weight: 800
+    }
+
+    .nav__cta:hover {
+      background: color-mix(in oklab, var(--brand) 12%, transparent)
+    }
+
+    @media (max-width:640px) {
+      .nav {
+        min-height: 68px
+      }
+    }
 
     /* Hero */
-    .hero{position:relative; border-bottom:1px solid var(--stroke); overflow:clip}
-    .hero__inner{
-      display:grid; grid-template-columns: 1.05fr .95fr; gap:36px; align-items:center;
+    .hero {
+      position: relative;
+      border-bottom: 1px solid var(--stroke);
+      overflow: clip
+    }
+
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 36px;
+      align-items: center;
       padding-block: clamp(34px, 7vw, 110px);
     }
-    .badge{display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border:1px dashed var(--brand); color:var(--brand); border-radius:999px; font-weight:800; margin-bottom:14px}
-    .hero h1{margin:0 0 12px; font-size: clamp(30px, 4vw, 60px); line-height:1.1; letter-spacing:.2px}
-    .hero p{margin:0 0 24px; color:var(--muted); max-width:58ch}
-    .hero__cta{display:flex; flex-wrap:wrap; gap:12px}
-    .hero__image{
-      aspect-ratio: 10/5; border-radius: var(--radius-3xl); border:1px solid var(--stroke);
-      background: linear-gradient(160deg, color-mix(in oklab, var(--card), black 6%), color-mix(in oklab, var(--card), white 7%));
-      box-shadow: var(--shadow); overflow:hidden;
-      transform: translate3d(0,0,0);
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px dashed var(--brand);
+      color: var(--brand);
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 14px
     }
-    .hero__image img{ scale:1.02; transform: translateZ(0); }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 4vw, 60px);
+      line-height: 1.1;
+      letter-spacing: .2px
+    }
+
+    .hero p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      max-width: 58ch
+    }
+
+    .hero__cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px
+    }
+
+    .hero__image {
+      aspect-ratio: 10/5;
+      border-radius: var(--radius-3xl);
+      border: 1px solid var(--stroke);
+      background: linear-gradient(160deg, color-mix(in oklab, var(--card), black 6%), color-mix(in oklab, var(--card), white 7%));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .hero__image img {
+      scale: 1.02;
+      transform: translateZ(0);
+    }
 
     /* Sections */
-    section{padding-block: clamp(40px, 7vw, 96px)}
-    .section__head{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:20px}
-    .section__title{margin:0; font-size: clamp(22px, 2.6vw, 36px); font-weight:800}
-    .section__sub{margin:8px 0 0; color:var(--muted)}
+    section {
+      padding-block: clamp(40px, 7vw, 96px)
+    }
+
+    .section__head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px
+    }
+
+    .section__title {
+      margin: 0;
+      font-size: clamp(22px, 2.6vw, 36px);
+      font-weight: 800
+    }
+
+    .section__sub {
+      margin: 8px 0 0;
+      color: var(--muted)
+    }
 
     /* Grid & Cards */
-    .grid{display:grid; gap:24px}
-    .grid--3{grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))}
-    .card{
+    .grid {
+      display: grid;
+      gap: 24px
+    }
+
+    .grid--3 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+    }
+
+    .card {
       background: linear-gradient(180deg, color-mix(in oklab, var(--card), black 6%), color-mix(in oklab, var(--card), white 6%));
-      border:1px solid var(--stroke); border-radius: var(--radius-2xl); overflow:hidden; box-shadow: var(--shadow);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow);
       transition: transform .2s ease, border-color .2s ease;
     }
-    .card:hover{ transform: translateY(-4px); border-color: color-mix(in oklab, var(--brand), var(--stroke) 70%)}
-    .card__media{aspect-ratio: 8/5; overflow:hidden}
-    .card__media img{ width:100%; height:100%; object-fit:cover; transform:scale(1.02); transition: transform .4s ease }
-    .card:hover .card__media img{ transform:scale(1.06) }
-    .card__body{padding:20px}
-    .card__title{margin:0 0 8px; font-size: clamp(16px,1.8vw,20px); font-weight:800}
-    .muted{color:var(--muted)}
-    .pill{display:inline-block; padding:6px 10px; border:1px solid var(--stroke); border-radius:999px; color:var(--muted); font-size:.92rem}
-    .price{color:var(--brand); font-weight:800}
-    .divider{height:1px; background:var(--stroke); margin:16px 0}
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in oklab, var(--brand), var(--stroke) 70%)
+    }
+
+    .card__media {
+      aspect-ratio: 8/5;
+      overflow: hidden
+    }
+
+    .card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.02);
+      transition: transform .4s ease
+    }
+
+    .card:hover .card__media img {
+      transform: scale(1.06)
+    }
+
+    .card__body {
+      padding: 20px
+    }
+
+    .card__title {
+      margin: 0 0 8px;
+      font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 800
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--stroke);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .92rem
+    }
+
+    .price {
+      color: var(--brand);
+      font-weight: 800
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--stroke);
+      margin: 16px 0
+    }
 
     /* Inline quantity */
-    .qty-inline{display:flex; gap:8px; align-items:center; margin-top:10px}
-    .qty-inline .qty-input{
-      width:70px; text-align:center; border-radius:12px; border:1px solid var(--stroke); background:var(--panel); color:var(--text); padding:8px 6px; font-weight:700;
+    .qty-inline {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 10px
+    }
+
+    .qty-inline .qty-input {
+      width: 70px;
+      text-align: center;
+      border-radius: 12px;
+      border: 1px solid var(--stroke);
+      background: var(--panel);
+      color: var(--text);
+      padding: 8px 6px;
+      font-weight: 700;
     }
 
     /* Menu */
-    .menu{display:grid; gap:12px}
-    .menu__row{
-      display:grid; grid-template-columns: 1fr auto; gap:14px; align-items:center;
-      padding:12px 18px; border:1px solid var(--stroke); border-radius:16px; background: color-mix(in oklab, var(--panel) 92%, transparent);
+    .menu {
+      display: grid;
+      gap: 12px
     }
-    .menu__price{font-weight:800; color:var(--brand)}
+
+    .menu__row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 12px 18px;
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      background: color-mix(in oklab, var(--panel) 92%, transparent);
+    }
+
+    .menu__price {
+      font-weight: 800;
+      color: var(--brand)
+    }
 
     /* Testimonials */
-    .testi{display:grid; gap:16px}
-    .quote{padding:18px; border:1px solid var(--stroke); border-radius:18px; background: color-mix(in oklab, var(--panel) 94%, transparent)}
-    .quote p{margin:0; color:var(--muted)}
+    .testi {
+      display: grid;
+      gap: 16px
+    }
+
+    .quote {
+      padding: 18px;
+      border: 1px solid var(--stroke);
+      border-radius: 18px;
+      background: color-mix(in oklab, var(--panel) 94%, transparent)
+    }
+
+    .quote p {
+      margin: 0;
+      color: var(--muted)
+    }
 
     /* Form */
-    form{display:grid; gap:12px}
-    .input{padding:14px; border:1px solid var(--stroke); border-radius:14px; background:var(--panel); color:var(--text)}
-    textarea.input{min-height:120px; resize:vertical}
-    .form__row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
-    @media (max-width:640px){ .form__row{grid-template-columns:1fr} }
+    form {
+      display: grid;
+      gap: 12px
+    }
+
+    .input {
+      padding: 14px;
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      background: var(--panel);
+      color: var(--text)
+    }
+
+    textarea.input {
+      min-height: 120px;
+      resize: vertical
+    }
+
+    .form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px
+    }
+
+    @media (max-width:640px) {
+      .form__row {
+        grid-template-columns: 1fr
+      }
+    }
 
     /* Footer */
-    footer{border-top:1px solid var(--stroke); padding-block:24px; color:var(--muted)}
-    .foot{display:flex; gap:16px; justify-content:space-between; align-items:center; flex-wrap:wrap}
-    .social{display:flex; gap:10px}
-    .chip{padding:8px 12px; border:1px solid var(--stroke); border-radius:999px}
+    footer {
+      border-top: 1px solid var(--stroke);
+      padding-block: 24px;
+      color: var(--muted)
+    }
+
+    .foot {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .social {
+      display: flex;
+      gap: 10px
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border: 1px solid var(--stroke);
+      border-radius: 999px
+    }
 
     /* Cart UI (right) */
-    #cart-fab{
-      position:fixed; right:18px; bottom:18px; z-index:90;
-      background:linear-gradient(180deg, color-mix(in oklab, var(--brand), #fff 24%), var(--brand));
-      color:#101010; font-weight:900; border:0; border-radius:999px; padding:12px 16px; box-shadow:var(--shadow);
-      display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+    #cart-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 90;
+      background: linear-gradient(180deg, color-mix(in oklab, var(--brand), #fff 24%), var(--brand));
+      color: #101010;
+      font-weight: 900;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 16px;
+      box-shadow: var(--shadow);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
     }
-    #cart-count{background:#101010; color:#fff; font-weight:800; border-radius:999px; padding:2px 8px; font-size:.9rem}
-    #cart-backdrop{position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:95; display:none}
-    #cart-drawer{
-      position:fixed; inset-block:0; inset-inline-end:0; width:min(430px, 92vw);
-      background:var(--panel); border-inline-start:1px solid var(--stroke); box-shadow:var(--shadow);
-      z-index:100; transform:translateX(100%); transition:transform .3s ease; display:flex; flex-direction:column
+
+    #cart-count {
+      background: #101010;
+      color: #fff;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: .9rem
     }
-    #cart-drawer.open{ transform:none; animation: slideIn .28s ease }
-    @keyframes slideIn{from{transform:translateX(100%)} to{transform:none}}
-    #cart-drawer header{display:flex; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--stroke)}
-    #cart-close{border:1px solid var(--stroke); background:transparent; color:inherit; border-radius:10px; padding:6px 10px; cursor:pointer}
-    #cart-items{padding:12px 14px; overflow:auto; flex:1; display:grid; gap:10px}
-    .cart-item{border:1px solid var(--stroke); border-radius:14px; padding:10px; display:grid; grid-template-columns:1fr auto; align-items:center; gap:10px; background: color-mix(in oklab, var(--panel) 96%, transparent)}
-    .cart-item h4{margin:0; font-size:1rem; font-weight:800}
-    .cart-item .meta{color:var(--muted); font-size:.92rem}
-    .cart-item .controls{display:flex; align-items:center; gap:8px}
-    .cart-item .qty{display:inline-flex; align-items:center; gap:6px; border:1px solid var(--stroke); border-radius:999px; padding:4px 8px}
-    .cart-item button{border:1px solid var(--stroke); background:transparent; color:inherit; border-radius:10px; padding:4px 8px; cursor:pointer}
-    .cart-item .price{font-weight:800; color:var(--brand)}
-    #cart-drawer footer{border-top:1px solid var(--stroke); padding:12px 14px; display:grid; gap:10px; background: color-mix(in oklab, var(--panel) 96%, transparent)}
-    #cart-drawer footer .row{display:flex; align-items:center; justify-content:space-between}
-    #cart-drawer footer .actions{display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap}
-    #cart-clear.secondary{border:1px solid var(--stroke); background:transparent; color:inherit; border-radius:12px; padding:10px 14px; cursor:pointer; font-weight:700}
-    #cart-checkout.primary{background:#25D366; color:#101010; font-weight:800; border-radius:999px; padding:10px 16px; text-decoration:none}
+
+    #cart-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .5);
+      z-index: 95;
+      display: none
+    }
+
+    #cart-drawer {
+      position: fixed;
+      inset-block: 0;
+      inset-inline-end: 0;
+      width: min(430px, 92vw);
+      background: var(--panel);
+      border-inline-start: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      z-index: 100;
+      transform: translateX(100%);
+      transition: transform .3s ease;
+      display: flex;
+      flex-direction: column
+    }
+
+    #cart-drawer.open {
+      transform: none;
+      animation: slideIn .28s ease
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%)
+      }
+
+      to {
+        transform: none
+      }
+    }
+
+    #cart-drawer header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--stroke)
+    }
+
+    #cart-close {
+      border: 1px solid var(--stroke);
+      background: transparent;
+      color: inherit;
+      border-radius: 10px;
+      padding: 6px 10px;
+      cursor: pointer
+    }
+
+    #cart-items {
+      padding: 12px 14px;
+      overflow: auto;
+      flex: 1;
+      display: grid;
+      gap: 10px
+    }
+
+    .cart-item {
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 10px;
+      background: color-mix(in oklab, var(--panel) 96%, transparent)
+    }
+
+    .cart-item h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 800
+    }
+
+    .cart-item .meta {
+      color: var(--muted);
+      font-size: .92rem
+    }
+
+    .cart-item .controls {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .cart-item .qty {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--stroke);
+      border-radius: 999px;
+      padding: 4px 8px
+    }
+
+    .cart-item button {
+      border: 1px solid var(--stroke);
+      background: transparent;
+      color: inherit;
+      border-radius: 10px;
+      padding: 4px 8px;
+      cursor: pointer
+    }
+
+    .cart-item .price {
+      font-weight: 800;
+      color: var(--brand)
+    }
+
+    #cart-drawer footer {
+      border-top: 1px solid var(--stroke);
+      padding: 12px 14px;
+      display: grid;
+      gap: 10px;
+      background: color-mix(in oklab, var(--panel) 96%, transparent)
+    }
+
+    #cart-drawer footer .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    #cart-drawer footer .actions {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      flex-wrap: wrap
+    }
+
+    #cart-clear.secondary {
+      border: 1px solid var(--stroke);
+      background: transparent;
+      color: inherit;
+      border-radius: 12px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-weight: 700
+    }
+
+    #cart-checkout.primary {
+      background: #25D366;
+      color: #101010;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 10px 16px;
+      text-decoration: none
+    }
 
     /* Toast */
-    #toast{
-      position:fixed; inset-inline:0; bottom:26px; margin:auto; width:fit-content; max-width:90vw;
-      background:#121212; color:#fff; padding:10px 14px; border-radius:999px; box-shadow:var(--shadow);
-      opacity:0; transform:translateY(10px); transition:.25s; z-index:120
+    #toast {
+      position: fixed;
+      inset-inline: 0;
+      bottom: 26px;
+      margin: auto;
+      width: fit-content;
+      max-width: 90vw;
+      background: #121212;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: .25s;
+      z-index: 120
     }
-    #toast.show{opacity:1; transform:none}
+
+    #toast.show {
+      opacity: 1;
+      transform: none
+    }
 
     /* WhatsApp floating (left) */
-    .wa-fab{
-      position:fixed; left:18px; bottom:18px; z-index:88; display:inline-flex; align-items:center; gap:10px;
-      background:#25D366; color:#101010; font-weight:900; border-radius:999px; padding:12px 16px; box-shadow:var(--shadow)
+    .wa-fab {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 88;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #101010;
+      font-weight: 900;
+      border-radius: 999px;
+      padding: 12px 16px;
+      box-shadow: var(--shadow)
     }
 
     /* Small text tweaks on tiny screens */
-    @media (max-width:480px){ h1,h2,h3{font-size:1.18rem} p{font-size:.96rem} }
+    @media (max-width:480px) {
+
+      h1,
+      h2,
+      h3 {
+        font-size: 1.18rem
+      }
+
+      p {
+        font-size: .96rem
+      }
+    }
   </style>
 </head>
 
@@ -228,14 +744,16 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#home" aria-label="Zalloum & Skafi Roaster">
-        <span class="brand__logo"><img src="photos-zalloum-roaster/logo_zalloum.jpg" alt="Z&S Logo" width="48" height="48" loading="lazy"></span>
+        <span class="brand__logo"><img src="photos-zalloum-roaster/logo_zalloum.jpg" alt="Z&S Logo" width="48"
+            height="48" loading="lazy"></span>
         <span class="brand__text">
           <span>Zalloum & Skafi Roaster</span>
+          <small>Premium Nuts • Chocolate • Coffee</small>
         </span>
       </a>
 
       <nav class="nav__links" aria-label="Primary">
-        <a href="#contact" class="nav__cta">Contact</a>
+        <a href="#contact" class="nav__cta">Map</a>
         <a class="nav__cta" href="tel:+962796845328">Call Now</a>
       </nav>
     </div>
@@ -247,14 +765,16 @@
       <div>
         <span class="badge">Roasted Daily • Crafted Locally</span>
         <h1>Luxury you can taste.</h1>
-        <p>From golden-crunch cashews to artisan chocolate and freshly roasted coffee, Zalloum & Skafi delivers elegant quality for gifts and everyday moments.</p>
+        <p>From golden-crunch cashews to artisan chocolate and freshly roasted coffee, Zalloum & Skafi delivers elegant
+          quality for gifts and everyday moments.</p>
         <div class="hero__cta">
           <a class="btn btn--gold" href="#menu">Browse Price List</a>
           <a class="btn btn--ghost" href="#contact">Order Now</a>
         </div>
       </div>
       <div class="hero__image" aria-label="Hero image">
-        <img src="photos-zalloum-roaster/background zalloum.jpg" alt="Premium roasted nuts & chocolate" loading="lazy" width="1200" height="600">
+        <img src="photos-zalloum-roaster/background zalloum.jpg" alt="Premium roasted nuts & chocolate" loading="lazy"
+          width="1200" height="600">
       </div>
     </div>
   </section>
@@ -267,7 +787,9 @@
         <p class="section__sub">Jordanian heritage, modern craft</p>
       </div>
       <div class="card" style="padding:20px">
-        <p>We carefully select top-grade <strong>cashews, almonds, hazelnuts, and pistachios</strong>, pairing them with fine chocolate and specialty coffee roasts. From sourcing to packaging, every detail is tuned for a memorable taste.</p>
+        <p>We carefully select top-grade <strong>cashews, almonds, hazelnuts, and pistachios</strong>, pairing them with
+          fine chocolate and specialty coffee roasts. From sourcing to packaging, every detail is tuned for a memorable
+          taste.</p>
       </div>
     </div>
   </section>
@@ -284,7 +806,8 @@
         <!-- Product 1 -->
         <article class="card">
           <div class="card__media">
-            <img src="photos-zalloum-roaster/roasted cashew.jpeg" alt="Premium Roasted Cashews" loading="lazy" width="800" height="500">
+            <img src="photos-zalloum-roaster/roasted cashew.jpeg" alt="Premium Roasted Cashews" loading="lazy"
+              width="800" height="500">
           </div>
           <div class="card__body">
             <h3 class="card__title">Premium Roasted Cashews</h3>
@@ -295,12 +818,8 @@
               <span class="price">JOD 3.00</span>
             </div>
 
-            <button class="btn btn--gold add-to-cart"
-              data-id="cashew-250"
-              data-name="Premium Roasted Cashews"
-              data-price="3.00"
-              data-meta="250 g"
-              aria-label="Add Premium Roasted Cashews to cart">
+            <button class="btn btn--gold add-to-cart" data-id="cashew-250" data-name="Premium Roasted Cashews"
+              data-price="3.00" data-meta="250 g" aria-label="Add Premium Roasted Cashews to cart">
               + Add to cart
             </button>
           </div>
@@ -309,7 +828,8 @@
         <!-- Product 2 -->
         <article class="card">
           <div class="card__media">
-            <img src="photos-zalloum-roaster/almond_drops .jpg" alt="Spanish Almonds" loading="lazy" width="800" height="500">
+            <img src="photos-zalloum-roaster/almond_drops .jpg" alt="Spanish Almonds" loading="lazy" width="800"
+              height="500">
           </div>
           <div class="card__body">
             <h3 class="card__title">Spanish Almonds</h3>
@@ -320,12 +840,8 @@
               <span class="price">JOD 2.00</span>
             </div>
 
-            <button class="btn btn--gold add-to-cart"
-              data-id="almond-250"
-              data-name="Spanish Almonds"
-              data-price="2.00"
-              data-meta="250 g"
-              aria-label="Add Spanish Almonds to cart">
+            <button class="btn btn--gold add-to-cart" data-id="almond-250" data-name="Spanish Almonds" data-price="2.00"
+              data-meta="250 g" aria-label="Add Spanish Almonds to cart">
               + Add to cart
             </button>
           </div>
@@ -345,12 +861,8 @@
               <span class="price">JOD 3.00</span>
             </div>
 
-            <button class="btn btn--gold add-to-cart"
-              data-id="drajeh-250"
-              data-name="Drajjeh mixed"
-              data-price="3.00"
-              data-meta="250 g"
-              aria-label="Add Drajjeh mixed to cart">
+            <button class="btn btn--gold add-to-cart" data-id="drajeh-250" data-name="Drajjeh mixed" data-price="3.00"
+              data-meta="250 g" aria-label="Add Drajjeh mixed to cart">
               + Add to cart
             </button>
           </div>
@@ -360,7 +872,8 @@
 
         <article class="card">
           <div class="card__media">
-            <img src="https://granadamarket.net/wp-content/uploads/2024/06/Granada-Roastery-Malban-Nougats-01.webp" alt="Premium white noga" loading="lazy" width="800" height="500">
+            <img src="https://granadamarket.net/wp-content/uploads/2024/06/Granada-Roastery-Malban-Nougats-01.webp"
+              alt="Premium white noga" loading="lazy" width="800" height="500">
           </div>
           <div class="card__body">
             <h3 class="card__title">Premium white noga</h3>
@@ -371,12 +884,8 @@
               <span class="price">JOD 3.25</span>
             </div>
 
-            <button class="btn btn--gold add-to-cart"
-              data-id="noga-250"
-              data-name="Premium white noga"
-              data-price="3.25"
-              data-meta="250 g"
-              aria-label="Add Premium white noga to cart">
+            <button class="btn btn--gold add-to-cart" data-id="noga-250" data-name="Premium white noga"
+              data-price="3.25" data-meta="250 g" aria-label="Add Premium white noga to cart">
               + Add to cart
             </button>
           </div>
@@ -398,8 +907,10 @@
         <div class="menu__row"><strong>Mix nuts</strong><span class="menu__price">JOD 10.00 / kg</span></div>
         <div class="menu__row"><strong>Premium Cashews</strong><span class="menu__price">JOD 12.00 / kg</span></div>
         <div class="menu__row"><strong>Drajjeh</strong><span class="menu__price">JOD 12.00 / kg</span></div>
-        <div class="menu__row"><strong>Premium Chocolate Mix</strong><span class="menu__price">JOD 17.00 / kg</span></div>
-        <div class="menu__row"><strong>Standard Chocolate Mix</strong><span class="menu__price">JOD 8.00 / kg</span></div>
+        <div class="menu__row"><strong>Premium Chocolate Mix</strong><span class="menu__price">JOD 17.00 / kg</span>
+        </div>
+        <div class="menu__row"><strong>Standard Chocolate Mix</strong><span class="menu__price">JOD 8.00 / kg</span>
+        </div>
         <div class="menu__row"><strong>Good Quality Drops</strong><span class="menu__price">JOD 5.00 / kg</span></div>
         <div class="menu__row"><strong>Soos Toffee</strong><span class="menu__price">JOD 8.00 / kg</span></div>
         <div class="menu__row"><strong>Normal Noja</strong><span class="menu__price">JOD 8.00 / kg</span></div>
@@ -417,9 +928,18 @@
         <p class="section__sub">Showcase your high-quality product shots here</p>
       </div>
       <div class="grid grid--3">
-        <div class="card"><div class="card__media"><img src="photos-zalloum-roaster/dubaiFarrah.jpg" alt="Dubai Farrah" loading="lazy" width="1000" height="1000"></div></div>
-        <div class="card"><div class="card__media"><img src="photos-zalloum-roaster/shamiDrops.jpg" alt="Shami Drops" loading="lazy" width="1000" height="1000"></div></div>
-        <div class="card"><div class="card__media"><img src="photos-zalloum-roaster/nuts EXP.jpg" alt="Mixed nuts display" loading="lazy" width="1000" height="1000"></div></div>
+        <div class="card">
+          <div class="card__media"><img src="photos-zalloum-roaster/dubaiFarrah.jpg" alt="Dubai Farrah" loading="lazy"
+              width="1000" height="1000"></div>
+        </div>
+        <div class="card">
+          <div class="card__media"><img src="photos-zalloum-roaster/shamiDrops.jpg" alt="Shami Drops" loading="lazy"
+              width="1000" height="1000"></div>
+        </div>
+        <div class="card">
+          <div class="card__media"><img src="photos-zalloum-roaster/nuts EXP.jpg" alt="Mixed nuts display"
+              loading="lazy" width="1000" height="1000"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -434,8 +954,7 @@
       <div class="grid" style="grid-template-columns:6.0fr .7fr">
         <div class="card" style="padding:0; overflow:hidden">
           <div class="card__media" style="aspect-ratio:auto; min-height:100%">
-            <iframe
-              width="100%" height="420" style="border:0; border-radius:20px"
+            <iframe width="100%" height="420" style="border:0; border-radius:20px"
               src="https://www.openstreetmap.org/export/embed.html?bbox=35.9829%2C31.9760%2C35.9889%2C31.9800&layer=mapnik&marker=31.9780%2C35.9859"
               loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
@@ -450,18 +969,20 @@
     <div class="container foot">
       <div>© 2025 Zalloum & Skafi Roaster — All rights reserved</div>
       <div class="social">
-        <a class="chip" href="https://www.instagram.com/zalloum_skafi_roaster" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a class="chip" href="https://www.instagram.com/zalloum_skafi_roaster" target="_blank" rel="noopener"
+          aria-label="Instagram">Instagram</a>
       </div>
       <div style="text-align:center; margin-top:10px;">
         <a href="https://maps.app.goo.gl/UvmGLDxUatemvLs78" target="_blank" rel="noopener"
-           style="background-color:#C8A56A; color:#101010; font-weight:900; text-decoration:none; padding:10px 20px; border-radius:999px; display:inline-block;">
+          style="background-color:#C8A56A; color:#101010; font-weight:900; text-decoration:none; padding:10px 20px; border-radius:999px; display:inline-block;">
           📍 Open in Google Maps
         </a>
       </div>
     </div>
 
     <!-- Cart controls (right) -->
-    <button id="cart-fab" aria-label="Cart" title="Cart">🛒 <span id="cart-count" aria-live="polite" aria-atomic="true">0</span></button>
+    <button id="cart-fab" aria-label="Cart" title="Cart">🛒 <span id="cart-count" aria-live="polite"
+        aria-atomic="true">0</span></button>
     <div id="cart-backdrop"></div>
     <aside id="cart-drawer" aria-label="Shopping Cart">
       <header>
@@ -482,7 +1003,8 @@
   <!-- WhatsApp floating (left) -->
   <a class="wa-fab" href="https://wa.me/962796845328" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M20.52 3.48A11.94 11.94 0 0 0 12.013 0C5.392 0 .013 5.38.013 11.999c0 2.116.557 4.17 1.617 5.99L0 24l6.17-1.61a11.96 11.96 0 0 0 5.842 1.51h.005c6.62 0 12-5.38 12-11.999a11.93 11.93 0 0 0-3.497-8.421zM12.017 22.03h-.005a9.97 9.97 0 0 1-5.082-1.396l-.364-.216-3.66.955.978-3.57-.236-.366a9.96 9.96 0 0 1-1.543-5.4C2.105 6.47 6.589 2 12.012 2c2.67 0 5.18 1.04 7.067 2.93A9.93 9.93 0 0 1 22 12.005a10.01 10.01 0 0 1-9.983 10.026zm5.693-7.533c-.31-.155-1.843-.91-2.13-1.015-.287-.105-.496-.155-.705.156-.21.31-.81 1.015-.993 1.225-.182.21-.364.235-.674.08-.31-.156-1.309-.483-2.494-1.542-.92-.81-1.54-1.81-1.72-2.12-.182-.31-.02-.478.136-.633.14-.14.31-.364.465-.546.155-.183.206-.31.31-.52.103-.21.05-.39-.025-.546-.08-.155-.705-1.7-.965-2.32-.254-.61-.512-.527-.705-.536l-.6-.01c-.21 0-.547.078-.833.39-.287.31-1.093 1.068-1.093 2.607 0 1.54 1.12 3.027 1.277 3.236.155.21 2.203 3.36 5.33 4.715.745.32 1.327.51 1.782.653.75.24 1.43.206 1.967.125.6-.09 1.843-.752 2.105-1.48.26-.73.26-1.355.18-1.49-.08-.14-.285-.22-.596-.374z"/>
+      <path
+        d="M20.52 3.48A11.94 11.94 0 0 0 12.013 0C5.392 0 .013 5.38.013 11.999c0 2.116.557 4.17 1.617 5.99L0 24l6.17-1.61a11.96 11.96 0 0 0 5.842 1.51h.005c6.62 0 12-5.38 12-11.999a11.93 11.93 0 0 0-3.497-8.421zM12.017 22.03h-.005a9.97 9.97 0 0 1-5.082-1.396l-.364-.216-3.66.955.978-3.57-.236-.366a9.96 9.96 0 0 1-1.543-5.4C2.105 6.47 6.589 2 12.012 2c2.67 0 5.18 1.04 7.067 2.93A9.93 9.93 0 0 1 22 12.005a10.01 10.01 0 0 1-9.983 10.026zm5.693-7.533c-.31-.155-1.843-.91-2.13-1.015-.287-.105-.496-.155-.705.156-.21.31-.81 1.015-.993 1.225-.182.21-.364.235-.674.08-.31-.156-1.309-.483-2.494-1.542-.92-.81-1.54-1.81-1.72-2.12-.182-.31-.02-.478.136-.633.14-.14.31-.364.465-.546.155-.183.206-.31.31-.52.103-.21.05-.39-.025-.546-.08-.155-.705-1.7-.965-2.32-.254-.61-.512-.527-.705-.536l-.6-.01c-.21 0-.547.078-.833.39-.287.31-1.093 1.068-1.093 2.607 0 1.54 1.12 3.027 1.277 3.236.155.21 2.203 3.36 5.33 4.715.745.32 1.327.51 1.782.653.75.24 1.43.206 1.967.125.6-.09 1.843-.752 2.105-1.48.26-.73.26-1.355.18-1.49-.08-.14-.285-.22-.596-.374z" />
     </svg>
     <span>WhatsApp</span>
   </a>
@@ -492,59 +1014,59 @@
 
   <!-- Unified JS (after content) -->
   <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    // Header shadow on scroll
-    const header = document.querySelector('header');
-    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 4);
-    onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    document.addEventListener('DOMContentLoaded', function () {
+      // Header shadow on scroll
+      const header = document.querySelector('header');
+      const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 4);
+      onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
 
-    // Toast
-    function showToast(msg){
-      const t = document.getElementById('toast');
-      t.textContent = msg;
-      t.classList.add('show');
-      setTimeout(()=>t.classList.remove('show'), 1400);
-    }
+      // Toast
+      function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 1400);
+      }
 
-    // Cart
-    const LS_KEY = 'zsk_cart', PHONE='962796845328';
-    const $=(s,r=document)=>r.querySelector(s); const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
-    const esc=s=>(s||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-    const fmt=n=>'JOD '+Number(n||0).toFixed(2);
+      // Cart
+      const LS_KEY = 'zsk_cart', PHONE = '962796845328';
+      const $ = (s, r = document) => r.querySelector(s); const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+      const esc = s => (s || '').toString().replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+      const fmt = n => 'JOD ' + Number(n || 0).toFixed(2);
 
-    const $fab=$('#cart-fab'), $cnt=$('#cart-count'), $drawer=$('#cart-drawer'), $backdrop=$('#cart-backdrop');
-    const $close=$('#cart-close'), $items=$('#cart-items'), $total=$('#cart-total'), $clear=$('#cart-clear'), $checkout=$('#cart-checkout');
+      const $fab = $('#cart-fab'), $cnt = $('#cart-count'), $drawer = $('#cart-drawer'), $backdrop = $('#cart-backdrop');
+      const $close = $('#cart-close'), $items = $('#cart-items'), $total = $('#cart-total'), $clear = $('#cart-clear'), $checkout = $('#cart-checkout');
 
-    let cart = load();
-    function load(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)) || {items:[]} }catch{ return {items:[]} } }
-    function save(){ localStorage.setItem(LS_KEY, JSON.stringify(cart)); }
-    const count = ()=> cart.items.reduce((s,i)=>s+i.qty,0);
-    const sum   = ()=> cart.items.reduce((s,i)=>s+i.price*i.qty,0);
+      let cart = load();
+      function load() { try { return JSON.parse(localStorage.getItem(LS_KEY)) || { items: [] } } catch { return { items: [] } } }
+      function save() { localStorage.setItem(LS_KEY, JSON.stringify(cart)); }
+      const count = () => cart.items.reduce((s, i) => s + i.qty, 0);
+      const sum = () => cart.items.reduce((s, i) => s + i.price * i.qty, 0);
 
-    function addItem({id,name,price,meta}, qty=1){
-      const p=parseFloat(price); if (Number.isNaN(p)) { console.warn('data-price must be number, got:', price); return; }
-      const ex=cart.items.find(i=>i.id===id);
-      if (ex) ex.qty += qty; else cart.items.push({id,name,price:p,meta,qty});
-      save(); render();
-    }
-    function changeQty(id,d){
-      const it=cart.items.find(i=>i.id===id); if(!it) return;
-      it.qty+=d; if(it.qty<=0) cart.items=cart.items.filter(i=>i.id!==id);
-      save(); render();
-    }
-    function removeItem(id){ cart.items=cart.items.filter(i=>i.id!==id); save(); render(); }
-    function clearCart(){ cart.items=[]; save(); render(); }
+      function addItem({ id, name, price, meta }, qty = 1) {
+        const p = parseFloat(price); if (Number.isNaN(p)) { console.warn('data-price must be number, got:', price); return; }
+        const ex = cart.items.find(i => i.id === id);
+        if (ex) ex.qty += qty; else cart.items.push({ id, name, price: p, meta, qty });
+        save(); render();
+      }
+      function changeQty(id, d) {
+        const it = cart.items.find(i => i.id === id); if (!it) return;
+        it.qty += d; if (it.qty <= 0) cart.items = cart.items.filter(i => i.id !== id);
+        save(); render();
+      }
+      function removeItem(id) { cart.items = cart.items.filter(i => i.id !== id); save(); render(); }
+      function clearCart() { cart.items = []; save(); render(); }
 
-    function render(){
-      $cnt.textContent = count();
-      if (cart.items.length===0){
-        $items.innerHTML = '<div class="cart-item"><div><h4>Cart is empty</h4><div class="meta">Add products from the section above</div></div></div>';
-      }else{
-        $items.innerHTML = cart.items.map(i=>`
+      function render() {
+        $cnt.textContent = count();
+        if (cart.items.length === 0) {
+          $items.innerHTML = '<div class="cart-item"><div><h4>Cart is empty</h4><div class="meta">Add products from the section above</div></div></div>';
+        } else {
+          $items.innerHTML = cart.items.map(i => `
           <div class="cart-item" data-id="${i.id}">
             <div>
               <h4>${esc(i.name)}</h4>
-              <div class="meta">${esc(i.meta||'')}</div>
+              <div class="meta">${esc(i.meta || '')}</div>
               <div class="price">${fmt(i.price)}</div>
             </div>
             <div class="controls">
@@ -557,57 +1079,56 @@
             </div>
           </div>
         `).join('');
+        }
+        $total.textContent = fmt(sum());
+        const lines = cart.items.map(i => `• ${i.name} (${i.meta || ''}) × ${i.qty} = ${fmt(i.price * i.qty)}`);
+        const msg = ['New order - Zalloum & Skafi', ...lines, '—', `Total: ${fmt(sum())}`].join('\n');
+        $checkout.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
       }
-      $total.textContent = fmt(sum());
-      const lines = cart.items.map(i=>`• ${i.name} (${i.meta||''}) × ${i.qty} = ${fmt(i.price*i.qty)}`);
-      const msg = ['New order - Zalloum & Skafi', ...lines, '—', `Total: ${fmt(sum())}`].join('\n');
-      $checkout.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
-    }
 
-    // Product add buttons with inline quantity
-    $$('.add-to-cart').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const wrap = btn.closest('.card__body') || document;
-        const qtyInput = wrap.querySelector('.qty-input');
-        const qty = Math.max(1, parseInt(qtyInput?.value || '1', 10));
-        addItem({ id:btn.dataset.id, name:btn.dataset.name, price:btn.dataset.price, meta:btn.dataset.meta }, qty);
-        showToast(`✓ Added ${qty} to cart`);
-        btn.style.transform='scale(0.98)'; setTimeout(()=>btn.style.transform='',120);
+      // Product add buttons with inline quantity
+      $$('.add-to-cart').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const wrap = btn.closest('.card__body') || document;
+          const qtyInput = wrap.querySelector('.qty-input');
+          const qty = Math.max(1, parseInt(qtyInput?.value || '1', 10));
+          addItem({ id: btn.dataset.id, name: btn.dataset.name, price: btn.dataset.price, meta: btn.dataset.meta }, qty);
+          showToast(`✓ Added ${qty} to cart`);
+          btn.style.transform = 'scale(0.98)'; setTimeout(() => btn.style.transform = '', 120);
+        });
       });
+
+      // Inline qty +/-
+      document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('qty-inc') || e.target.classList.contains('qty-dec')) {
+          const box = e.target.closest('.qty-inline'); if (!box) return;
+          const input = box.querySelector('.qty-input'); let v = parseInt(input.value || '1', 10);
+          if (e.target.classList.contains('qty-inc')) v++; else v = Math.max(1, v - 1);
+          input.value = v;
+        }
+      });
+
+      // Drawer open/close
+      $fab.addEventListener('click', () => { $drawer.classList.add('open'); $backdrop.style.display = 'block'; });
+      $close.addEventListener('click', () => { $drawer.classList.remove('open'); $backdrop.style.display = 'none'; });
+      $backdrop.addEventListener('click', () => { $drawer.classList.remove('open'); $backdrop.style.display = 'none'; });
+
+      // Delegated controls inside drawer
+      $items.addEventListener('click', e => {
+        const row = e.target.closest('.cart-item'); if (!row) return;
+        const id = row.dataset.id;
+        if (e.target.classList.contains('qty-inc')) changeQty(id, +1);
+        if (e.target.classList.contains('qty-dec')) changeQty(id, -1);
+        if (e.target.classList.contains('remove')) removeItem(id);
+      });
+
+      // Clear cart
+      $clear.addEventListener('click', () => { if (confirm('Clear cart?')) clearCart(); });
+
+      // Initial
+      render();
     });
-
-    // Inline qty +/-
-    document.addEventListener('click', (e)=>{
-      if (e.target.classList.contains('qty-inc') || e.target.classList.contains('qty-dec')){
-        const box = e.target.closest('.qty-inline'); if(!box) return;
-        const input = box.querySelector('.qty-input'); let v = parseInt(input.value||'1',10);
-        if (e.target.classList.contains('qty-inc')) v++; else v = Math.max(1, v-1);
-        input.value = v;
-      }
-    });
-
-    // Drawer open/close
-    $fab.addEventListener('click', ()=>{ $drawer.classList.add('open'); $backdrop.style.display='block'; });
-    $close.addEventListener('click', ()=>{ $drawer.classList.remove('open'); $backdrop.style.display='none'; });
-    $backdrop.addEventListener('click', ()=>{ $drawer.classList.remove('open'); $backdrop.style.display='none'; });
-
-    // Delegated controls inside drawer
-    $items.addEventListener('click', e=>{
-      const row = e.target.closest('.cart-item'); if(!row) return;
-      const id = row.dataset.id;
-      if (e.target.classList.contains('qty-inc')) changeQty(id,+1);
-      if (e.target.classList.contains('qty-dec')) changeQty(id,-1);
-      if (e.target.classList.contains('remove'))  removeItem(id);
-    });
-
-    // Clear cart
-    $clear.addEventListener('click', ()=>{ if (confirm('Clear cart?')) clearCart(); });
-
-    // Initial
-    render();
-  });
   </script>
 </body>
+
 </html>
-
-
